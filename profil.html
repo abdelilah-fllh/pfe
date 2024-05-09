@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <header class="relative z-20 w-full border-b shadow-md border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+        <!-- <div class="relative max-w-full px-6 "> -->
+        <div class="flex justify-center w-full">
+        <div class="w-5/6">
+        <nav aria-label="main navigation" class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+            <!-- logo fsac -->
+            <div class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
+                <img src="imgs/FSAC LOGO.jpg" alt="fsac logo" width="300" height="300" class="w-32 h-16 bg-emerald-500">
+            </div>
+            <div class="flex justify-between items-center px-6 ml-auto lg:ml-0 lg:p-0">
+                <!-- chat icons -->
+                <div class="w-10 h-8 ml-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text w-8 h-8" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                        <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </div>
+                <button onclick="menu()">
+                    <!-- Avatar -->
+                    <div class="relative inline-flex items-center justify-center w-20 h-12 text-white rounded-full ml-3 border-2 border-slate-500">
+                        <img src="https://i.pravatar.cc/40?img=35" alt="user name" title="user name" width="35" height="35" class="max-w-full rounded-full ml-0 mr-1" />
+                        <!-- <div class="bg-blue-500 ">
+                            <span>AF</span>
+                        </div> -->
+                        <!-- <span class="sr-only"> 7 new emails </span> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-1 fill-slate-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </nav>
+        </div>
+        </div>
+
+    </header>
+
+    <div class="menu fixed z-50 shadow-lg bg-white w-64 right-10 top-[4.5rem] mr-7 shadow-slate-700/5" id="menu">
+        <div class="inline-block w-full h-full">
+            <div class="flex items-center w-full h-14 border-b border-black">
+                <span class="ml-6 font-roboto text-xl">Abdelilah FELLAH</span>
+            </div>
+            <a href="#">
+                <div class="flex items-center w-full h-14 border-b border-gray-400">
+                    <span class="ml-6">Home</span>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="flex items-center w-full h-14 border-b border-black">
+                    <span class="ml-6">Mes Inscription</span>
+                </div>
+            </a>
+            <div class="flex items-center w-full h-14 border-b border-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-6 mr-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                </svg>
+                <span class="text-red-400">Deconnecter</span>
+            </div>
+        </div>
+    </div>
+    <!-- script de menu -->
+    <script src="script.js"></script>
+
+    <div class=" flex justify-center w-full h-auto mt-10">
+        <!-- <div class=" mt-10 h-20"> -->
+            <div class="flex items-center justify-between border-b-4 border-blue-300 rounded-sm p-4 w-4/5">
+                <div class="flex items-center">
+                    <div class="bg-green-800 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                        <span class="text-2xl">AF</span>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-black text-xl">Abdelilah FELLAH</h2>
+                        <!-- <div class="w-24 h-1 bg-purple-600"></div> -->
+                    </div>
+                </div>
+                <button class="bg-white text-black border border-gray-300 rounded px-4 py-2 flex items-center">
+                    <span>Edit you profil</span>
+                    <!-- <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        <!-- </div> -->
+    </div>
+    <div class="flex justify-center w-full pt-10">
+        <div class="w-4/5 mb-8">
+                <h1 class="text-3xl pl-2">Infos personnelles</h1><br>
+                <div class="flex justify-between">
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">Identité</span><br>
+                                <span>nom, prenom, cin, date de naissance, lieu de naissance, ect</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">contact</span><br>
+                                <span>tel, email</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                </div>
+
+                <h1 class="text-3xl pl-2 mt-5">info de compte</h1><br>
+                <div class="flex justify-between">
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">Mot de passe</span><br>
+                                <span>modifation de mot de passe</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                </div>
+
+                <h1 class="text-3xl pl-2 mt-5">Accademique information</h1><br>
+                <div class="flex justify-between">
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">bac infos</span><br>
+                                <span>serie, montion, ect</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">Diplôme indormation</span><br>
+                                <span>Spécialité, établissement, ect</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3">
+                                <span class="text-lg text-blue-300">CV</span><br>
+                                <span>cv</span>
+                            </div>
+                            <div class="flex justify-center items-center h-full w-14 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                    </a>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
