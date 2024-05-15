@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.menu{
+    display: none;
+}
+
+.w-48p {
+    width: 48%;
+}
