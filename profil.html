@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./output.css">
+    <script src="popup.js"></script>
 </head>
 <body>
     <header class="relative z-20 w-full border-b shadow-md border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
@@ -86,9 +87,6 @@
                 </div>
                 <button class="bg-white text-black border border-gray-300 rounded px-4 py-2 flex items-center">
                     <span>Edit you profil</span>
-                    <!-- <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg> -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 ml-2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
@@ -100,83 +98,303 @@
         <div class="w-4/5 mb-8">
                 <h1 class="text-3xl pl-2">Infos personnelles</h1><br>
                 <div class="flex justify-between">
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
-                                <span class="text-lg text-blue-300">Identité</span><br>
+                    <button onclick="openModal('modelConfirm')" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
+                                <span class=" text-lg text-blue-300">Identité</span><br>
                                 <span>nom, prenom, cin, date de naissance, lieu de naissance, ect</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
+                    </button>
+                    <button onclick="openModal('modelContact')" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
                                 <span class="text-lg text-blue-300">contact</span><br>
-                                <span>tel, email</span>
+                                <span>Adress, tel, email</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
+                    </button>
                 </div>
 
                 <h1 class="text-3xl pl-2 mt-5">info de compte</h1><br>
                 <div class="flex justify-between">
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
+                    <button onclick="openModal('modelPassword')" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
                                 <span class="text-lg text-blue-300">Mot de passe</span><br>
                                 <span>modifation de mot de passe</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
+                    </button>
                 </div>
 
-                <h1 class="text-3xl pl-2 mt-5">Accademique information</h1><br>
+                <h1 class="text-3xl pl-2 mt-5">Academique information</h1><br>
                 <div class="flex justify-between">
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
+                    <button class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
                                 <span class="text-lg text-blue-300">bac infos</span><br>
                                 <span>serie, montion, ect</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
+                    </button>
+                    <button class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
                                 <span class="text-lg text-blue-300">Diplôme indormation</span><br>
                                 <span>Spécialité, établissement, ect</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
+                    </button>
                 </div>
                 <div class="flex justify-between mt-4">
-                    <a href="#" class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
-                            <div class="pl-3 pt-3">
+                    <button class="flex justify-between w-48p h-24 border border-gray-600 rounded-sm border-b-2">
+                            <div class="pl-3 pt-3 w-5/6">
                                 <span class="text-lg text-blue-300">CV</span><br>
                                 <span>cv</span>
                             </div>
-                            <div class="flex justify-center items-center h-full w-14 ">
+                            <div class="flex justify-center items-center h-full w-1/12">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
-                    </a>
+                    </button>
                 </div>
+        </div>
+    </div>
+
+    <!-- identite code -->
+    <div id="modelConfirm" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
+        <div class="relative top-16 mx-auto shadow-xl rounded-md bg-white max-w-2xl">
+    
+            <div class="flex justify-end p-2">
+                <button onclick="closeModal('modelConfirm')" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="flex items-center justify-center p-6">
+                <div class="mx-auto w-full max-w-[550px] bg-white">
+                    <form>
+                        <!-- nom -->
+                        <div class="-mx-3 flex flex-wrap">
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-2">
+                                    <label for="fName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        Nom
+                                    </label>
+                                    <input type="text" name="fName" id="fName" placeholder="First Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-2">
+                                    <label for="lName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        الإسم العائلي
+                                    </label>
+                                    <input type="text" name="lName" id="lName" placeholder="Last Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- prenpm -->
+                        <div class="-mx-3 flex flex-wrap">
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-2">
+                                    <label for="fName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        prenom
+                                    </label>
+                                    <input type="text" name="fName" id="fName" placeholder="First Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-2">
+                                    <label for="lName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        الإسم الشخصي
+                                    </label>
+                                    <input type="text" name="lName" id="lName" placeholder="Last Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    Cin
+                                </label>
+                                <input type="text" name="cin" id="cin" placeholder="Cin"
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <div class="-mx-3 flex flex-wrap">
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-é">
+                                    <label for="fName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        lieu de naissance
+                                    </label>
+                                    <input type="text" name="fName" id="fName" placeholder="First Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                            <div class="w-full px-3 sm:w-1/2">
+                                <div class="mb-2">
+                                    <label for="lName" class="mb-2 block text-base font-medium text-[#07074D]">
+                                        مكان الازدياد
+                                    </label>
+                                    <input type="text" name="lName" id="lName" placeholder="Last Name"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    Date de naissance
+                                </label>
+                                <input type="date" name="date" id="date"
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                                enregistrer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- contact code -->
+    <div id="modelContact" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
+        <div class="relative top-36 mx-auto shadow-xl rounded-md bg-white max-w-2xl">
+    
+            <div class="flex justify-end p-2">
+                <button onclick="closeModal('modelContact')" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="flex items-center justify-center p-6">
+                <div class="mx-auto w-full max-w-[550px] bg-white">
+                    <form>
+                        <!-- tel -->
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    Tel
+                                </label>
+                                <input type="tel" name="cin" id="cin" placeholder=""
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <!-- fix -->
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    Tel fix
+                                </label>
+                                <input type="tel" name="cin" id="cin" placeholder=""
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <!-- adress -->
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    Adresse
+                                </label>
+                                <textarea name="" id="" cols="30" rows="2" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                                enregistrer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- password code -->
+    <div id="modelPassword" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 ">
+        <div class="relative top-48 mx-auto shadow-xl rounded-md bg-white max-w-2xl">
+    
+            <div class="flex justify-end p-2">
+                <button onclick="closeModal('modelPassword')" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="flex items-center justify-center p-6">
+                <div class="mx-auto w-full max-w-[550px] bg-white">
+                    <form>
+                        <!-- tel -->
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    old password
+                                </label>
+                                <input type="password" name="cin" id="cin" placeholder=""
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <div class="w-full px-2">
+                            <div class="mb-2">
+                                <label for="date" class="mb-2 block text-base font-medium text-[#07074D]">
+                                    confirmer
+                                </label>
+                                <input type="password" name="cin" id="cin" placeholder=""
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <div>
+                            <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                                enregistrer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
         </div>
     </div>
 
